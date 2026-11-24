@@ -1,33 +1,31 @@
 class Mdx < Formula
   desc "Terminal reader for Markdown and MDX"
   homepage "https://github.com/ybbapp/mdx"
-  version "0.3.1"
-
   on_macos do
     on_arm do
-      url "https://github.com/ybbapp/mdx/releases/download/v0.3.1/mdx_v0.3.1_darwin_arm64.tar.gz"
-      sha256 "b5a6b39a02e2a2629da4de8513ba7367e225d19050403e96f12d4f7e7f3439fa"
+      url "https://github.com/ybbapp/mdx/releases/download/v0.3.2/mdx_v0.3.2_darwin_arm64.tar.gz"
+      sha256 "92cd93e14615719999c5c883aa4ca7a9c5e51a7f7976bc210de171bc64b0ce19"
     end
     on_intel do
-      url "https://github.com/ybbapp/mdx/releases/download/v0.3.1/mdx_v0.3.1_darwin_amd64.tar.gz"
-      sha256 "6dd9288ee5cf2da56dfeb91c8ac105f22f4cc783a522e49898ffc91296b28b25"
+      url "https://github.com/ybbapp/mdx/releases/download/v0.3.2/mdx_v0.3.2_darwin_amd64.tar.gz"
+      sha256 "4f67c78b19c3ada4e16c6cbe00fc7827cdd12c3a2a403985f421df9c0f88884e"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/ybbapp/mdx/releases/download/v0.3.1/mdx_v0.3.1_linux_arm64.tar.gz"
-      sha256 "3ee0b01367234ab22185dc1267cd54316c12884ef8fd358510496acba33f0c1c"
+      url "https://github.com/ybbapp/mdx/releases/download/v0.3.2/mdx_v0.3.2_linux_arm64.tar.gz"
+      sha256 "51357eeb9270befe831713f3e0a8dde0bfe070b8ad97d2c7fa0e30eaeb158fe8"
     end
     on_intel do
-      url "https://github.com/ybbapp/mdx/releases/download/v0.3.1/mdx_v0.3.1_linux_amd64.tar.gz"
-      sha256 "849eacd8efa2371b6581cbc2cb9cff3559bf26f058c3db5a729eb572f7c78e6b"
+      url "https://github.com/ybbapp/mdx/releases/download/v0.3.2/mdx_v0.3.2_linux_amd64.tar.gz"
+      sha256 "a38b2058a020945b4757603f72f8be4fdd16a82e38a8e71158900cdf9866473d"
     end
   end
 
   def install
     bin.install "mdx"
-    (share/"mdx").install "sample.mdx"
+    pkgshare.install "sample.mdx"
   end
 
   test do
